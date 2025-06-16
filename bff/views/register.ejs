@@ -7,10 +7,6 @@
 <body>
   <h1>Register</h1>
 
-  <% if (message) { %>
-    <p style="color: red;"><%= message %></p>
-  <% } %>
-
   <form method="POST" action="/register">
     <label for="name">Name:</label><br/>
     <input type="text" name="name" id="name" required><br/><br/>
