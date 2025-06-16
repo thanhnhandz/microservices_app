@@ -5,9 +5,11 @@ const port = 3002;
 app.use(express.json());
 
 let products = [];
+let nextId = 1;
 
 app.post('/products', (req, res) => {
-  const { id, name, stock } = req.body;
+  const id = nextId++;
+  const { name, stock } = req.body;
   if (products.find(p => p.id === id)) {
     return res.status(400).json({ message: 'Product ID already exists' });
   }

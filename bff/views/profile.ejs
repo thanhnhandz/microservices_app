@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Profile</title>
+</head>
+<body>
+  <% if (currentUser) { %>
+    <h1>Hello, <%= currentUser.username %>!</h1>
+    <p><strong>User ID:</strong> <%= currentUser.id %></p>
+
+    <!-- You can include more user info as needed -->
+    
+    <form method="POST" action="/logout">
+      <button type="submit">Logout</button>
+    </form>
+  <% } else { %>
+    <p>You are not logged in. <a href="/login">Login here</a>.</p>
+  <% } %>
+</body>
+</html>
