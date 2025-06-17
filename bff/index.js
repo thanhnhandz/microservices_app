@@ -16,6 +16,7 @@ app.use(express.json());
 const USER_SERVICE = 'http://localhost:3001';
 const PRODUCT_SERVICE = 'http://localhost:3002';
 
+
 app.get('/', (req, res) => {
   res.render('index', { title: 'Home' });
 });

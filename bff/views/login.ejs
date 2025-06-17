@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-</head>
-<body>
-  <h1>Login</h1>
+<div class="container">
+  <div class="center-box-login">
+    <h3 class="log_in-header">LOG IN</h3>
+    <form method="POST" action="/login" class="form-login">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+      <br><br>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required><br /><br />
 
-  <% if (message) { %>
-    <p style="color: red;"><%= message %></p>
-  <% } %>
-
-  <form method="POST" action="/login">
-    <label for="email">Email:</label><br/>
-    <input type="email" name="email" id="email" required><br/><br/>
-
-    <label for="password">Password:</label><br/>
-    <input type="password" name="password" id="password" required><br/><br/>
-
-    <button type="submit">Login</button>
-  </form>
-
-  <p>Don't have an account? <a href="/register">Register here</a>.</p>
-</body>
-</html>
+      <button type="submit" class="btn-primary">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/register" class="Register_here">Register here</a>.</p>
+  </div>
+</div>
